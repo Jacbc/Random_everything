@@ -321,3 +321,7 @@ button {
     height: auto;
     font-size: 2rem;
 }
+
+a:hover {
+    cursor:pointer;
+}

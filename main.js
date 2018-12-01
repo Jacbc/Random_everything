@@ -47,6 +47,8 @@ let imageWidth = 380; //your desired image width in pixels
 let imageHeight = 510; //desired image height in pixels
 let collectionID = 2270935; //the collection ID from the original url
 
+/*
+
 function renderGalleryItem(){
     fetch(`https://source.unsplash.com/collection/${collectionID}/${imageWidth}x${imageHeight}/`).then((response)=> {
         let galleryItem = document.createElement('div');
@@ -62,6 +64,50 @@ function renderGalleryItem(){
 for(let i=0; i<numItemsToGenerate; i++){
     renderGalleryItem();
 }
+*/
+
+/*
+let galleryItem = document.createElement('div');
+
+function renderGalleryItem(){
+        galleryItem.classList.add('gallery-item');
+        gridDiv.appendChild(galleryItem);
+}
+
+function addImageToDiv() {
+    galleryItem.innerHTML = `
+      <img class="gallery-image span1" src="https://source.unsplash.com/collection/${collectionID}/${imageWidth}x${imageHeight}/" alt="gallery image"/>
+    `;
+}
+
+for(let i=0; i<numItemsToGenerate; i++){
+    renderGalleryItem();
+    addImageToDiv();
+}
+*/
+
+
+
+/*
+
+function renderGalleryItem() {
+
+}
+for (let i = 0; i < numItemsToGenerate; i++) {
+    fetch(`https://source.unsplash.com/collection/${collectionID}/${imageWidth}x${imageHeight}/`).then((response)=> {
+        let galleryItem = document.createElement('div');
+        galleryItem.classList.add('gallery-item');
+        galleryItem.innerHTML = `
+      <img class="gallery-image span1" src="${response.url}" alt="gallery image"/>
+    `;
+        gridDiv.appendChild(galleryItem);
+    })
+}
+
+renderGalleryItem();
+*/
+
+
 
 let divs;
 let numGridDivs;
